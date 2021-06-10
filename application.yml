@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev  #开发环境
+  application:
+    name: microservicecloud-config-zpark-dev
+---
+spring:
+  profiles: test  #测试环境
+  application:
+    name: microservicecloud-config-zpark-test
+#以UTF-8格式保存文件
