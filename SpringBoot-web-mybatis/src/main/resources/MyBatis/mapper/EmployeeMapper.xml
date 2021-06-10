@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wjz.demo.mapper.EmployeeMapper">
+<!-- 
+
+	public Employee findById(Integer id);
+	
+	public int insertEmployee(Employee emp);
+
+ -->
+	<select id="findById" resultType="com.wjz.demo.entities.Employee">
+		select * from employee where id =#{id}
+	</select>
+	
+	<insert id="insertEmployee" parameterType="com.wjz.demo.entities.Employee">
+		insert into employee (lastName,email,gender,d_id) values(#{lastName},#{email},#{gender},#{dId})
+	</insert>
+</mapper>
